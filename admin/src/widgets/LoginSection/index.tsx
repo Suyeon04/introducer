@@ -1,3 +1,4 @@
+import Input from '@/entities/ui/input';
 import { css } from '@emotion/react';
 import Image from 'next/image';
 
@@ -15,6 +16,7 @@ export function LoginSection() {
                 height={500}
                 alt="Picture of the author"
             />
+            <Input type="string" placeholder={''} focusColor='#005792' />
         </div>
     );
 }
