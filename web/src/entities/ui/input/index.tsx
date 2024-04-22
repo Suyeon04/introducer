@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React from "react";
+import styled from "@emotion/styled";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   placeholder: string;
@@ -14,12 +14,22 @@ const StyledInput = styled.input<InputProps>`
   outline: none;
 
   &:focus {
-    border-color: ${props => props.focusColor || '#4CAF50'}; 
+    border-color: ${(props) => props.focusColor || "#4CAF50"};
   }
 `;
 
-const Input: React.FC<InputProps> = ({ type = 'text', placeholder, focusColor }) => {
-  return <StyledInput type={type} placeholder={placeholder} focusColor={focusColor} />;
-}
+const Input: React.FC<InputProps> = ({
+  type = "text",
+  placeholder,
+  focusColor,
+}) => {
+  return (
+    <StyledInput
+      type={type}
+      placeholder={placeholder}
+      focusColor={focusColor}
+    />
+  );
+};
 
 export default Input;
