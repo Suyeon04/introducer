@@ -1,5 +1,7 @@
 import SlideImage from "@/widgets/SlideImage";
 import styled from "@emotion/styled";
+import Text from "@/entities/ui/text";
+import CordingLanguge from "@/entities/ui/cording-language";
 
 const data = {
   headerImageUrlArray: [
@@ -35,6 +37,13 @@ export default function LoginPage() {
           <SlideImage imageUrlArray={data.headerImageUrlArray} />
         </Header>
         <Body>
+          <Text text={"asdf"} fontSize={"20px"} fontWeight={"bold"} />
+          <CordingLanguge
+            languageImageUrl={
+              "https://i.pinimg.com/564x/13/40/7c/13407c12f50f08d328800c3caef43f61.jpg"
+            }
+            languageName={"javascript"}
+          />
           <div>
             <div>asdf</div>
             <div>asdf</div>

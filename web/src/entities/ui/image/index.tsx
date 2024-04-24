@@ -5,6 +5,8 @@ interface ImageProps {
   src: string;
   radius?: number;
   alt?: string;
+  width?: string;
+  height?: string;
 }
 
 const StyledImageContainer = styled.div`
@@ -13,17 +15,29 @@ const StyledImageContainer = styled.div`
   align-items: center;
 `;
 
-const StyledImage = styled.img<{ radius?: number }>`
-  width: auto;
-  height: auto;
+const StyledImage = styled.img<ImageProps>`
+  width: ${(props) => props.width || "auto"};
+  height: ${(props) => props.height || "auto"};
   border-radius: ${(props) => props.radius || 0}px;
   object-fit: contain;
 `;
 
-const Image: React.FC<ImageProps> = ({ src, radius, alt = "image" }) => {
+const Image: React.FC<ImageProps> = ({
+  src,
+  radius,
+  alt = "image",
+  width,
+  height,
+}) => {
   return (
     <StyledImageContainer>
-      <StyledImage src={src} radius={radius} alt={alt} />
+      <StyledImage
+        src={src}
+        radius={radius}
+        alt={alt}
+        width={width}
+        height={height}
+      />
     </StyledImageContainer>
   );
 };
