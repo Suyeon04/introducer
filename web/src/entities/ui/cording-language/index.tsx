@@ -12,7 +12,6 @@ const StyledCodingLanguage = styled.div`
   display: flex;
   align-items: center;
   padding: 10px;
-  border-radius: 5px;
 `;
 
 const ContentContainer = styled.div`

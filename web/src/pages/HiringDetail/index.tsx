@@ -2,13 +2,60 @@ import SlideImage from "@/widgets/SlideImage";
 import styled from "@emotion/styled";
 import Text from "@/entities/ui/text";
 import CordingLanguge from "@/entities/ui/cording-language";
+import HiringHeader from "@/widgets/HiringHeader";
+import HiringConditionContainer from "@/widgets/HiringConditionContainer";
 
 const data = {
+  companyName: "코인원(coinone)",
+  hiringTitle: "Web Frontend 개발자",
   headerImageUrlArray: [
     "https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI",
     "https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI",
     "https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI",
     "https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI",
+  ],
+  usedLanguage: [
+    {
+      languageImageUrl:
+        "https://i.pinimg.com/564x/13/40/7c/13407c12f50f08d328800c3caef43f61.jpg",
+      languageName: "javascript",
+    },
+    {
+      languageImageUrl:
+        "https://i.pinimg.com/564x/13/40/7c/13407c12f50f08d328800c3caef43f61.jpg",
+      languageName: "javascript",
+    },
+    {
+      languageImageUrl:
+        "https://i.pinimg.com/564x/13/40/7c/13407c12f50f08d328800c3caef43f61.jpg",
+      languageName: "javascript",
+    },
+  ],
+  detailContents: [
+    {
+      title: "주요업무",
+      contents: [
+        "React, Next.js 개발 경력 2년 이상 또는 그에 준하는 역량을 갖추신 분",
+        "HTML, CSS, TypeScript, Javascript(ES6+)에 대한 이해를 보유하신 분",
+        "원활한 커뮤니케이션 능력을 보유하신 분",
+      ],
+    },
+    {
+      title: "주요업무",
+      contents: [
+        "React, Next.js 개발 경력 2년 이상 또는 그에 준하는 역량을 갖추신 분",
+        "HTML, CSS, TypeScript, Javascript(ES6+)에 대한 이해를 보유하신 분",
+        "원활한 커뮤니케이션 능력을 보유하신 분",
+      ],
+    },
+    {
+      title: "주요업무",
+      contents: [
+        "React, Next.js 개발 경력 2년 이상 또는 그에 준하는 역량을 갖추신 분",
+        "HTML, CSS, TypeScript, Javascript(ES6+)에 대한 이해를 보유하신 분",
+        "원활한 커뮤니케이션 능력을 보유하신 분",
+      ],
+    },
   ],
 };
 
@@ -27,6 +74,7 @@ const Header = styled.div`
 const Body = styled.div`
   display: flex;
   width: 100%;
+  flex-direction: column;
 `;
 
 export default function LoginPage() {
@@ -37,17 +85,23 @@ export default function LoginPage() {
           <SlideImage imageUrlArray={data.headerImageUrlArray} />
         </Header>
         <Body>
-          <Text text={"asdf"} fontSize={"20px"} fontWeight={"bold"} />
           <CordingLanguge
             languageImageUrl={
               "https://i.pinimg.com/564x/13/40/7c/13407c12f50f08d328800c3caef43f61.jpg"
             }
             languageName={"javascript"}
           />
-          <div>
-            <div>asdf</div>
-            <div>asdf</div>
-          </div>
+          <HiringHeader
+            companyName={data.companyName}
+            hiringTitle={data.hiringTitle}
+          />
+          {data.detailContents.map((content, index) => (
+            <HiringConditionContainer
+              title={content.title}
+              contents={content.contents}
+              key={index}
+            />
+          ))}
         </Body>
       </Container>
     </>
