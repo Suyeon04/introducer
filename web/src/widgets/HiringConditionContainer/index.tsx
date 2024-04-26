@@ -1,5 +1,4 @@
 import Text from "@/entities/ui/text";
-import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { nanoid } from "nanoid";
 

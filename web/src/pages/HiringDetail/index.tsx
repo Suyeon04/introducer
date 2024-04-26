@@ -1,8 +1,7 @@
 import SlideImage from "@/widgets/SlideImage";
 import styled from "@emotion/styled";
-import Text from "@/entities/ui/text";
-import CordingLanguge from "@/entities/ui/cording-language";
 import HiringHeader from "@/widgets/HiringHeader";
+import HiringLanguageContainer from "@/widgets/HiringLanguageContainer";
 import HiringConditionContainer from "@/widgets/HiringConditionContainer";
 
 const data = {
@@ -15,6 +14,21 @@ const data = {
     "https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI",
   ],
   usedLanguage: [
+    {
+      languageImageUrl:
+        "https://i.pinimg.com/564x/13/40/7c/13407c12f50f08d328800c3caef43f61.jpg",
+      languageName: "javascript",
+    },
+    {
+      languageImageUrl:
+        "https://i.pinimg.com/564x/13/40/7c/13407c12f50f08d328800c3caef43f61.jpg",
+      languageName: "javascript",
+    },
+    {
+      languageImageUrl:
+        "https://i.pinimg.com/564x/13/40/7c/13407c12f50f08d328800c3caef43f61.jpg",
+      languageName: "javascript",
+    },
     {
       languageImageUrl:
         "https://i.pinimg.com/564x/13/40/7c/13407c12f50f08d328800c3caef43f61.jpg",
@@ -91,16 +105,11 @@ export default function LoginPage() {
           />
         </Header>
         <Body>
-          <CordingLanguge
-            languageImageUrl={
-              "https://i.pinimg.com/564x/13/40/7c/13407c12f50f08d328800c3caef43f61.jpg"
-            }
-            languageName={"javascript"}
-          />
           <HiringHeader
             companyName={data.companyName}
             hiringTitle={data.hiringTitle}
           />
+          <HiringLanguageContainer usedLanguage={data.usedLanguage} />
           {data.detailContents.map((content) => (
             <HiringConditionContainer
               title={content.title}
