@@ -16,9 +16,9 @@ const HiringConditionContainer = styled.div`
 export default function HiringHeader({ title, contents }: Props) {
   return (
     <HiringConditionContainer>
-      <Text text={title} fontSize={"30px"} fontWeight={"bold"} />
+      <Text text={title} fontSize={30} fontWeight={"bold"} />
       {contents.map((content, index) => (
-        <Text text={"· " + content} fontSize={"15px"} key={index} />
+        <Text text={"· " + content} fontSize={15} key={index} />
       ))}
     </HiringConditionContainer>
   );

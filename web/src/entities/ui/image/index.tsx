@@ -5,8 +5,8 @@ interface ImageProps {
   src: string;
   radius?: number;
   alt?: string;
-  width?: string;
-  height?: string;
+  width?: number;
+  height?: number;
 }
 
 const StyledImageContainer = styled.div`
@@ -16,8 +16,8 @@ const StyledImageContainer = styled.div`
 `;
 
 const StyledImage = styled.img<ImageProps>`
-  width: ${(props) => props.width || "auto"};
-  height: ${(props) => props.height || "auto"};
+  width: ${(props) => props.width + "px" || "auto"};
+  height: ${(props) => props.height + "px" || "auto"};
   border-radius: ${(props) => props.radius || 0}px;
   object-fit: contain;
 `;

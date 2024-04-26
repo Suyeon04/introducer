@@ -4,12 +4,12 @@ import styled from "@emotion/styled";
 interface TextProps {
   text: string;
   fontWeight?: string;
-  fontSize: string;
+  fontSize: number;
   fontColor?: string;
 }
 
 const StyledText = styled.text<TextProps>`
-  font-size: ${(props) => props.fontSize};
+  font-size: ${(props) => props.fontSize + "px"};
   color: ${(props) => props.fontColor};
   font-weight: ${(props) => props.fontWeight};
 `;

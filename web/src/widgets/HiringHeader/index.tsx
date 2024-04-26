@@ -16,8 +16,8 @@ const StyledHiringHeader = styled.div`
 export default function HiringHeader({ companyName, hiringTitle }: Props) {
   return (
     <StyledHiringHeader>
-      <Text text={hiringTitle} fontSize={"50px"} fontWeight={"bold"} />
-      <Text text={companyName} fontSize={"20px"} />
+      <Text text={hiringTitle} fontSize={50} fontWeight={"bold"} />
+      <Text text={companyName} fontSize={20} />
     </StyledHiringHeader>
   );
 }
