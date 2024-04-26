@@ -33,6 +33,7 @@ const data = {
   ],
   detailContents: [
     {
+      id: 1,
       title: "주요업무",
       contents: [
         "React, Next.js 개발 경력 2년 이상 또는 그에 준하는 역량을 갖추신 분",
@@ -41,6 +42,7 @@ const data = {
       ],
     },
     {
+      id: 2,
       title: "주요업무",
       contents: [
         "React, Next.js 개발 경력 2년 이상 또는 그에 준하는 역량을 갖추신 분",
@@ -49,6 +51,7 @@ const data = {
       ],
     },
     {
+      id: 3,
       title: "주요업무",
       contents: [
         "React, Next.js 개발 경력 2년 이상 또는 그에 준하는 역량을 갖추신 분",
@@ -98,11 +101,11 @@ export default function LoginPage() {
             companyName={data.companyName}
             hiringTitle={data.hiringTitle}
           />
-          {data.detailContents.map((content, index) => (
+          {data.detailContents.map((content) => (
             <HiringConditionContainer
               title={content.title}
               contents={content.contents}
-              key={index}
+              key={content.id}
             />
           ))}
         </Body>

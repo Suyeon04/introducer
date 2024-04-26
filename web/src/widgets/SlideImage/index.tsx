@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
+import { nanoid } from "nanoid";
 
 interface Props {
   imageUrlArray: string[];
@@ -26,8 +27,8 @@ export default function SlideImage({ imageUrlArray, companyName }: Props) {
         },
       }}
     >
-      {imageUrlArray.map((imageUrl, index) => (
-        <SwiperSlide key={index}>
+      {imageUrlArray.map((imageUrl) => (
+        <SwiperSlide key={nanoid()}>
           <Image src={imageUrl} alt={companyName} />
         </SwiperSlide>
       ))}

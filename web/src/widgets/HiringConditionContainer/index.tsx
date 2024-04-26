@@ -1,6 +1,7 @@
 import Text from "@/entities/ui/text";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
+import { nanoid } from "nanoid";
 
 interface Props {
   title: string;
@@ -17,8 +18,8 @@ export default function HiringConditionContainer({ title, contents }: Props) {
   return (
     <StyledHiringConditionContainer>
       <Text text={title} fontSize={30} fontWeight={"bold"} />
-      {contents.map((content, index) => (
-        <Text text={"· " + content} fontSize={15} key={index} />
+      {contents.map((content) => (
+        <Text text={"· " + content} fontSize={15} key={nanoid()} />
       ))}
     </StyledHiringConditionContainer>
   );
