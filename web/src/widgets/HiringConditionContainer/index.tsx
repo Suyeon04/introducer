@@ -7,19 +7,19 @@ interface Props {
   contents: string[];
 }
 
-const HiringConditionContainer = styled.div`
+const StyledHiringConditionContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px;
 `;
 
-export default function HiringHeader({ title, contents }: Props) {
+export default function HiringConditionContainer({ title, contents }: Props) {
   return (
-    <HiringConditionContainer>
+    <StyledHiringConditionContainer>
       <Text text={title} fontSize={30} fontWeight={"bold"} />
       {contents.map((content, index) => (
         <Text text={"· " + content} fontSize={15} key={index} />
       ))}
-    </HiringConditionContainer>
+    </StyledHiringConditionContainer>
   );
 }
