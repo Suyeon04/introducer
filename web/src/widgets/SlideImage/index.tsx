@@ -8,9 +8,10 @@ import { Pagination, Navigation } from "swiper/modules";
 
 interface Props {
   imageUrlArray: string[];
+  companyName: string;
 }
 
-export default function SlideImage({ imageUrlArray }: Props) {
+export default function SlideImage({ imageUrlArray, companyName }: Props) {
   return (
     <Swiper
       spaceBetween={10}
@@ -27,7 +28,7 @@ export default function SlideImage({ imageUrlArray }: Props) {
     >
       {imageUrlArray.map((imageUrl, index) => (
         <SwiperSlide key={index}>
-          <Image src={imageUrl} />
+          <Image src={imageUrl} alt={companyName} />
         </SwiperSlide>
       ))}
     </Swiper>

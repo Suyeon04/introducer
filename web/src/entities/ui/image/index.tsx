@@ -4,7 +4,7 @@ import styled from "@emotion/styled";
 interface ImageProps {
   src: string;
   radius?: number;
-  alt?: string;
+  alt: string;
   width?: number;
   height?: number;
 }

@@ -29,7 +29,12 @@ const CodingLanguage: React.FC<CodingLanguageProps> = ({
   return (
     <StyledCodingLanguage>
       <ContentContainer>
-        <Image src={languageImageUrl} width={20} height={20} />
+        <Image
+          src={languageImageUrl}
+          width={20}
+          height={20}
+          alt={languageName}
+        />
         <Text text={languageName} fontSize={16} fontWeight="bold" />
       </ContentContainer>
     </StyledCodingLanguage>

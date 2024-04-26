@@ -82,7 +82,10 @@ export default function LoginPage() {
     <>
       <Container>
         <Header>
-          <SlideImage imageUrlArray={data.headerImageUrlArray} />
+          <SlideImage
+            imageUrlArray={data.headerImageUrlArray}
+            companyName={data.companyName}
+          />
         </Header>
         <Body>
           <CordingLanguge
