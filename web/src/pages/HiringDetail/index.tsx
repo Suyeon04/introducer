@@ -92,6 +92,8 @@ const Body = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
+  gap: 30px;
+  padding: 20px;
 `;
 
 export default function LoginPage() {

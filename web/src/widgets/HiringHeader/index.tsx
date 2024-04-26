@@ -10,7 +10,8 @@ interface Props {
 const StyledHiringHeader = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 30px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 `;
 
 export default function HiringHeader({ companyName, hiringTitle }: Props) {

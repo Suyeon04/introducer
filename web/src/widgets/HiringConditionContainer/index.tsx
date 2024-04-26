@@ -10,16 +10,24 @@ interface Props {
 const StyledHiringConditionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 20px;
+`;
+
+const StyledHiringConditionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  line-height: 25px;
+  padding-top: 5px;
 `;
 
 export default function HiringConditionContainer({ title, contents }: Props) {
   return (
     <StyledHiringConditionContainer>
       <Text text={title} fontSize={30} fontWeight={"bold"} />
-      {contents.map((content) => (
-        <Text text={"· " + content} fontSize={15} key={nanoid()} />
-      ))}
+      <StyledHiringConditionWrapper>
+        {contents.map((content) => (
+          <Text text={"· " + content} fontSize={15} key={nanoid()} />
+        ))}
+      </StyledHiringConditionWrapper>
     </StyledHiringConditionContainer>
   );
 }

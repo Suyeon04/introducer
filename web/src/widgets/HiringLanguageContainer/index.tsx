@@ -10,12 +10,11 @@ interface Props {
 const StyledHiringConditionContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 20px;
   flex-wrap: wrap;
-  gap: 10px;
 `;
 
 const StyledCordingLanguageWrapper = styled.div`
+  padding-top: 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
