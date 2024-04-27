@@ -3,6 +3,7 @@ import Button from "@/entities/ui/button";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { nanoid } from "nanoid";
+import KakaoMap from "@/entities/ui/kakao-map";
 
 interface Props {
   importantContents: { title: string; content: string }[];
@@ -69,6 +70,7 @@ export default function HiringSide({ importantContents, location }: Props) {
             </StyledHiringSideContent>
           );
         })}
+        <KakaoMap width={0} height={0} />
       </StyledHiringSideWrapper>
       <Button
         text={"지원하기"}
