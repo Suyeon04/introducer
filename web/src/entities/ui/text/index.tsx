@@ -6,12 +6,14 @@ interface TextProps {
   fontWeight?: string;
   fontSize: number;
   fontColor?: string;
+  padding?: number;
 }
 
 const StyledText = styled.text<TextProps>`
   font-size: ${(props) => props.fontSize + "px"};
   color: ${(props) => props.fontColor};
   font-weight: ${(props) => props.fontWeight};
+  padding: ${(props) => props.padding + "px"};
 `;
 
 const Text: React.FC<TextProps> = ({
@@ -19,6 +21,7 @@ const Text: React.FC<TextProps> = ({
   fontWeight = "normal",
   fontSize,
   fontColor,
+  padding,
 }) => {
   return (
     <StyledText
@@ -26,6 +29,7 @@ const Text: React.FC<TextProps> = ({
       fontWeight={fontWeight}
       fontSize={fontSize}
       fontColor={fontColor}
+      padding={padding}
     >
       {text}
     </StyledText>

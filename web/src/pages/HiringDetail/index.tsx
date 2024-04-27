@@ -79,6 +79,7 @@ const data = {
     { title: "직군", content: "개발" },
     { title: "경력사항", content: "경력 2년 이상" },
     { title: "고용형태", content: "정규직" },
+    { title: "위치", content: "서울 서초구 사평대로 335, 3층 306호" },
   ],
   location: "서울 서초구 사평대로 335, 3층 306호",
 };
