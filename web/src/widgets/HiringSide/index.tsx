@@ -1,10 +1,11 @@
 import Text from "@/entities/ui/text";
+import Button from "@/entities/ui/button";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
 interface Props {
-  companyName: string;
-  hiringTitle: string;
+  importantContents: { title: string; content: string }[];
+  location: string;
 }
 
 const StyledHiringSide = styled.div`
@@ -15,11 +16,17 @@ const StyledHiringSide = styled.div`
   border: 1px solid #ccc;
 `;
 
-export default function HiringSide({ companyName, hiringTitle }: Props) {
+export default function HiringSide({ importantContents, location }: Props) {
   return (
     <StyledHiringSide>
-      <Text text={hiringTitle} fontSize={50} fontWeight={"bold"} />
-      <Text text={companyName} fontSize={20} />
+      <Button
+        text={"지원하기"}
+        fontSize={15}
+        backgroundColor={"#4A4A4A"}
+        fontColor={"#FFFFFF"}
+        width={200}
+        height={40}
+      />
     </StyledHiringSide>
   );
 }

@@ -96,6 +96,7 @@ const Header = styled.div`
   justify-content: center;
 `;
 const Body = styled.div`
+  display: flex;
   width: 100%;
   padding: 20px;
 `;
@@ -141,7 +142,10 @@ export default function LoginPage() {
             ))}
           </HiringDetailLeft>
           <HiringDetailRight>
-            
+            <HiringSide
+              importantContents={data.importantContents}
+              location={data.location}
+            ></HiringSide>
           </HiringDetailRight>
         </Body>
       </Container>
