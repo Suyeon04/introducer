@@ -14,14 +14,13 @@ const StyledHiringSide = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 400px;
 `;
 
 const StyledHiringSideWrapper = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 20px;
 `;
 
@@ -79,6 +78,7 @@ export default function HiringSide({ importantContents, location }: Props) {
         fontColor={"#FFFFFF"}
         width={400}
         height={45}
+        borderRadius={5}
       />
     </StyledHiringSide>
   );

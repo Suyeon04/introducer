@@ -11,6 +11,7 @@ const StyledHiringConditionContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  padding-bottom: 20px;
 `;
 
 const StyledCordingLanguageWrapper = styled.div`
@@ -23,7 +24,7 @@ const StyledCordingLanguageWrapper = styled.div`
 export default function HiringLanguageContainer({ usedLanguage }: Props) {
   return (
     <StyledHiringConditionContainer>
-      <Text text={"사용 언어"} fontSize={30} fontWeight={"bold"} />
+      <Text text={"사용 언어"} fontSize={20} fontWeight={"bold"} />
       <StyledCordingLanguageWrapper>
         {usedLanguage.map((content) => (
           <CordingLanguage

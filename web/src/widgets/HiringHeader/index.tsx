@@ -10,14 +10,13 @@ interface Props {
 const StyledHiringHeader = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
   padding-bottom: 10px;
 `;
 
 export default function HiringHeader({ companyName, hiringTitle }: Props) {
   return (
     <StyledHiringHeader>
-      <Text text={hiringTitle} fontSize={50} fontWeight={"bold"} />
+      <Text text={hiringTitle} fontSize={40} fontWeight={"bold"} />
       <Text text={companyName} fontSize={20} />
     </StyledHiringHeader>
   );

@@ -96,25 +96,26 @@ const Header = styled.div`
   display: flex;
   justify-content: center;
 `;
+
 const Body = styled.div`
   display: flex;
   width: 100%;
-  padding: 20px;
+  padding-top: 40px;
+  gap: 100px;
+  justify-content: center;
 `;
 
 const HiringDetailLeft = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 20px;
+  width: 800px;
   gap: 20px;
 `;
 
 const HiringDetailRight = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 20px;
+  width: 400px;
 `;
 
 export default function LoginPage() {

@@ -8,6 +8,7 @@ interface TextProps {
   backgroundColor: string;
   width: number;
   height: number;
+  borderRadius?: number;
 }
 
 const StyledText = styled.button<TextProps>`
@@ -16,6 +17,7 @@ const StyledText = styled.button<TextProps>`
   color: ${(props) => props.fontColor};
   width: ${(props) => props.width + "px" || "auto"};
   height: ${(props) => props.height + "px" || "auto"};
+  border-radius: ${(props) => props.borderRadius + "px" || "0"};
 
   &:hover {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
@@ -29,6 +31,7 @@ const Text: React.FC<TextProps> = ({
   backgroundColor,
   width,
   height,
+  borderRadius,
 }) => {
   return (
     <StyledText
@@ -38,6 +41,7 @@ const Text: React.FC<TextProps> = ({
       backgroundColor={backgroundColor}
       width={width}
       height={height}
+      borderRadius={borderRadius}
     >
       {text}
     </StyledText>

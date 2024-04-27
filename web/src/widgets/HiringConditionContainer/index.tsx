@@ -22,7 +22,7 @@ const StyledHiringConditionWrapper = styled.div`
 export default function HiringConditionContainer({ title, contents }: Props) {
   return (
     <StyledHiringConditionContainer>
-      <Text text={title} fontSize={30} fontWeight={"bold"} />
+      <Text text={title} fontSize={20} fontWeight={"bold"} />
       <StyledHiringConditionWrapper>
         {contents.map((content) => (
           <Text text={"· " + content} fontSize={15} key={nanoid()} />
