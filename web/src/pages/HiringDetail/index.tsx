@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import HiringHeader from "@/widgets/HiringHeader";
 import HiringLanguageContainer from "@/widgets/HiringLanguageContainer";
 import HiringConditionContainer from "@/widgets/HiringConditionContainer";
+import HiringSide from "@/widgets/HiringSide";
 
 const data = {
   companyName: "코인원(coinone)",
@@ -74,6 +75,12 @@ const data = {
       ],
     },
   ],
+  importantContents: [
+    { title: "직군", content: "개발" },
+    { title: "경력사항", content: "경력 2년 이상" },
+    { title: "고용형태", content: "정규직" },
+  ],
+  location: "서울 서초구 사평대로 335, 3층 306호",
 };
 
 const Container = styled.div`
@@ -89,10 +96,22 @@ const Header = styled.div`
   justify-content: center;
 `;
 const Body = styled.div`
-  display: flex;
   width: 100%;
+  padding: 20px;
+`;
+
+const HiringDetailLeft = styled.div`
+  display: flex;
   flex-direction: column;
-  gap: 30px;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+`;
+
+const HiringDetailRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   padding: 20px;
 `;
 
@@ -107,18 +126,23 @@ export default function LoginPage() {
           />
         </Header>
         <Body>
-          <HiringHeader
-            companyName={data.companyName}
-            hiringTitle={data.hiringTitle}
-          />
-          <HiringLanguageContainer usedLanguage={data.usedLanguage} />
-          {data.detailContents.map((content) => (
-            <HiringConditionContainer
-              title={content.title}
-              contents={content.contents}
-              key={content.id}
+          <HiringDetailLeft>
+            <HiringHeader
+              companyName={data.companyName}
+              hiringTitle={data.hiringTitle}
             />
-          ))}
+            <HiringLanguageContainer usedLanguage={data.usedLanguage} />
+            {data.detailContents.map((content) => (
+              <HiringConditionContainer
+                title={content.title}
+                contents={content.contents}
+                key={content.id}
+              />
+            ))}
+          </HiringDetailLeft>
+          <HiringDetailRight>
+            
+          </HiringDetailRight>
         </Body>
       </Container>
     </>
