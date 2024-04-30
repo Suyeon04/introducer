@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import Image from "@/entities/ui/image";
 import Text from "@/entities/ui/text";
+import { Body1_R } from "@/shared/ui/typograpy";
 
 interface CodingLanguageProps {
   languageImageUrl: string;
@@ -34,7 +35,7 @@ const CodingLanguage: React.FC<CodingLanguageProps> = ({
           height={20}
           alt={languageName}
         />
-        <Text text={languageName} fontSize={16} fontWeight="bold" />
+        <Text text={languageName} typography={Body1_R} />
       </ContentContainer>
     </StyledCodingLanguage>
   );

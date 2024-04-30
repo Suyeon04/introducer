@@ -16,13 +16,13 @@ export const generateFont = ({
   line-height: ${lineHeight};
 `;
 
-export const B1 = generateFont({ fontSize: 30, fontWeight: medium });
-export const B1_B = generateFont({ fontWeight: bold, fontSize: 30 });
+export const B1 = generateFont({ fontWeight: medium, fontSize: 40 });
+export const B1_B = generateFont({ fontWeight: bold, fontSize: 40 });
 export const H1 = generateFont({ fontWeight: bold, fontSize: 28 });
 export const H2 = generateFont({ fontWeight: bold, fontSize: 22 });
-export const H3 = generateFont({ fontWeight: medium, fontSize: 18 });
-export const H3_B = generateFont({ fontWeight: bold, fontSize: 18 });
-export const H3_R = generateFont({ fontWeight: regular, fontSize: 18 });
+export const H3 = generateFont({ fontWeight: medium, fontSize: 20 });
+export const H3_B = generateFont({ fontWeight: bold, fontSize: 20 });
+export const H3_R = generateFont({ fontWeight: regular, fontSize: 20 });
 
 export const Body1 = generateFont({
   fontWeight: medium,
@@ -56,7 +56,7 @@ export const Body2_R = generateFont({
 });
 
 export const Feed_Body = generateFont({
-  fontWeight: 500,
+  fontWeight: regular,
   fontSize: 18,
   lineHeight: "180%",
 });

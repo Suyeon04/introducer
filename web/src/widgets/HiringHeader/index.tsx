@@ -1,4 +1,5 @@
 import Text from "@/entities/ui/text";
+import { B1_B, H3 } from "@/shared/ui/typograpy";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
@@ -16,8 +17,8 @@ const StyledHiringHeader = styled.div`
 export default function HiringHeader({ companyName, hiringTitle }: Props) {
   return (
     <StyledHiringHeader>
-      <Text text={hiringTitle} fontSize={40} fontWeight={"bold"} />
-      <Text text={companyName} fontSize={20} />
+      <Text text={hiringTitle} typography={B1_B} />
+      <Text text={companyName} typography={H3} />
     </StyledHiringHeader>
   );
 }

@@ -4,7 +4,7 @@ import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { nanoid } from "nanoid";
 import KakaoMap from "@/entities/ui/kakao-map";
-import { B1 } from "@/shared/ui/typograpy";
+import { B1, Body1_R, H3_R } from "@/shared/ui/typograpy";
 
 interface Props {
   importantContents: { title: string; content: string }[];
@@ -41,7 +41,7 @@ const StyledHiringSideTexts = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 60px;
+  gap: 40px;
 `;
 
 export default function HiringSide({ importantContents, location }: Props) {
@@ -57,13 +57,13 @@ export default function HiringSide({ importantContents, location }: Props) {
                   text={content.title}
                   padding={10}
                   fontColor={"#bababa"}
-                  typography={{
-                    fontWeight: 0,
-                    fontSize: 0,
-                    lineHeight: undefined,
-                  }}
+                  typography={Body1_R}
                 />
-                <Text text={content.content} padding={10} typography={B1} />
+                <Text
+                  text={content.content}
+                  padding={10}
+                  typography={Body1_R}
+                />
               </StyledHiringSideTexts>
               {!isLastItem && <StyledLine />}
             </StyledHiringSideContent>
