@@ -4,6 +4,7 @@ import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { nanoid } from "nanoid";
 import KakaoMap from "@/entities/ui/kakao-map";
+import { B1 } from "@/shared/ui/typograpy";
 
 interface Props {
   importantContents: { title: string; content: string }[];
@@ -54,16 +55,15 @@ export default function HiringSide({ importantContents, location }: Props) {
               <StyledHiringSideTexts>
                 <Text
                   text={content.title}
-                  fontSize={15}
                   padding={10}
                   fontColor={"#bababa"}
+                  typography={{
+                    fontWeight: 0,
+                    fontSize: 0,
+                    lineHeight: undefined,
+                  }}
                 />
-                <Text
-                  text={content.content}
-                  fontSize={15}
-                  padding={10}
-                  fontWeight={"bold"}
-                />
+                <Text text={content.content} padding={10} typography={B1} />
               </StyledHiringSideTexts>
               {!isLastItem && <StyledLine />}
             </StyledHiringSideContent>

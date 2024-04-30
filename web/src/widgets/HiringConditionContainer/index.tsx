@@ -1,4 +1,5 @@
 import Text from "@/entities/ui/text";
+import { B1, H2 } from "@/shared/ui/typograpy";
 import styled from "@emotion/styled";
 import { nanoid } from "nanoid";
 
@@ -22,7 +23,7 @@ const StyledHiringConditionWrapper = styled.div`
 export default function HiringConditionContainer({ title, contents }: Props) {
   return (
     <StyledHiringConditionContainer>
-      <Text text={title} fontSize={20} fontWeight={"bold"} />
+      <Text text={title} typography={B1} />
       <StyledHiringConditionWrapper>
         {contents.map((content) => (
           <Text text={"· " + content} fontSize={15} key={nanoid()} />

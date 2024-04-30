@@ -1,35 +1,32 @@
 import React from "react";
 import styled from "@emotion/styled";
+import { GenerateFontProps } from "@/shared/types";
+import { generateFont } from "@/shared/ui/typograpy";
 
 interface TextProps {
   text: string;
-  fontWeight?: string;
-  fontSize: number;
   fontColor?: string;
   padding?: number;
+  typography: GenerateFontProps;
 }
 
-const StyledText = styled.text<TextProps>`
-  font-size: ${(props) => props.fontSize + "px"};
+const StyledText = styled.div<TextProps>`
   color: ${(props) => props.fontColor};
-  font-weight: ${(props) => props.fontWeight};
   padding: ${(props) => props.padding + "px"};
 `;
 
 const Text: React.FC<TextProps> = ({
   text,
-  fontWeight = "normal",
-  fontSize,
   fontColor,
   padding,
+  typography,
 }) => {
   return (
     <StyledText
-      text={text}
-      fontWeight={fontWeight}
-      fontSize={fontSize}
       fontColor={fontColor}
       padding={padding}
+      typography={typography}
+      text={text}
     >
       {text}
     </StyledText>
