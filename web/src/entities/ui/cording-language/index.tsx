@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "@emotion/styled";
 import Image from "@/entities/ui/image";
-import Text from "@/entities/ui/text";
-import { Body1_R } from "@/shared/ui/typograpy";
+import { Body1 } from "@/shared/ui/typograpy";
+import { TextProps } from "@/shared/types";
+import { colors } from "@/shared/ui/colors";
 
 interface CodingLanguageProps {
   languageImageUrl: string;
@@ -22,6 +23,11 @@ const ContentContainer = styled.div`
   gap: 10px;
 `;
 
+const StyledText = styled.div<TextProps>`
+  color: ${(props) => props.fontColor};
+  ${Body1};
+`;
+
 const CodingLanguage: React.FC<CodingLanguageProps> = ({
   languageImageUrl,
   languageName,
@@ -35,7 +41,7 @@ const CodingLanguage: React.FC<CodingLanguageProps> = ({
           height={20}
           alt={languageName}
         />
-        <Text text={languageName} typography={Body1_R} />
+        <StyledText fontColor={colors.black}>{languageName}</StyledText>
       </ContentContainer>
     </StyledCodingLanguage>
   );

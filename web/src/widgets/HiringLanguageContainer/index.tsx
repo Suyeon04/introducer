@@ -1,6 +1,7 @@
 import CordingLanguage from "@/entities/ui/cording-language";
-import Text from "@/entities/ui/text";
-import { H3_B } from "@/shared/ui/typograpy";
+import { TextProps } from "@/shared/types";
+import { colors } from "@/shared/ui/colors";
+import { H3, H3_B } from "@/shared/ui/typograpy";
 import styled from "@emotion/styled";
 import { nanoid } from "nanoid";
 
@@ -21,11 +22,15 @@ const StyledCordingLanguageWrapper = styled.div`
   flex-wrap: wrap;
   gap: 15px;
 `;
+const StyledTitleText = styled.div<TextProps>`
+  color: ${(props) => props.fontColor};
+  ${H3};
+`;
 
 export default function HiringLanguageContainer({ usedLanguage }: Props) {
   return (
     <StyledHiringConditionContainer>
-      <Text text={"사용 언어"} typography={H3_B} />
+      <StyledTitleText fontColor={colors.black}>{"사용 언어"}</StyledTitleText>
       <StyledCordingLanguageWrapper>
         {usedLanguage.map((content) => (
           <CordingLanguage

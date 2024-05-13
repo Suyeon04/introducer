@@ -1,5 +1,6 @@
-import Text from "@/entities/ui/text";
-import { B1_B, H3 } from "@/shared/ui/typograpy";
+import { TextProps } from "@/shared/types";
+import { colors } from "@/shared/ui/colors";
+import { B1, H3 } from "@/shared/ui/typograpy";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 
@@ -14,11 +15,25 @@ const StyledHiringHeader = styled.div`
   padding-bottom: 10px;
 `;
 
+const StyledHeaderTitleText = styled.div<TextProps>`
+  color: ${(props) => props.fontColor};
+  ${B1};
+`;
+
+const StyledHeaderSubText = styled.div<TextProps>`
+  color: ${(props) => props.fontColor};
+  ${H3};
+`;
+
 export default function HiringHeader({ companyName, hiringTitle }: Props) {
   return (
     <StyledHiringHeader>
-      <Text text={hiringTitle} typography={B1_B} />
-      <Text text={companyName} typography={H3} />
+      <StyledHeaderTitleText fontColor={colors.black}>
+        {hiringTitle}
+      </StyledHeaderTitleText>
+      <StyledHeaderSubText fontColor={colors.black}>
+        {companyName}
+      </StyledHeaderSubText>
     </StyledHiringHeader>
   );
 }

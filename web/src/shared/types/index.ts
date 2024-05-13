@@ -3,3 +3,8 @@ export type GenerateFontProps = {
   fontSize: number;
   lineHeight?: string;
 };
+
+export type TextProps = {
+  fontColor: string;
+  padding?: number;
+};

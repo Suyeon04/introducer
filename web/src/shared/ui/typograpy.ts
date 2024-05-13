@@ -1,9 +1,9 @@
 import { css } from "@emotion/react";
 import { GenerateFontProps } from "../types";
 
-const bold = 900;
-const medium = 700;
-const regular = 500;
+const bold = 800;
+const medium = 600;
+const regular = 400;
 
 export const generateFont = ({
   fontWeight,
@@ -16,8 +16,8 @@ export const generateFont = ({
   line-height: ${lineHeight};
 `;
 
-export const B1 = generateFont({ fontWeight: medium, fontSize: 40 });
-export const B1_B = generateFont({ fontWeight: bold, fontSize: 40 });
+export const B1 = generateFont({ fontWeight: medium, fontSize: 44 });
+export const B1_B = generateFont({ fontWeight: bold, fontSize: 44 });
 export const H1 = generateFont({ fontWeight: bold, fontSize: 28 });
 export const H2 = generateFont({ fontWeight: bold, fontSize: 22 });
 export const H3 = generateFont({ fontWeight: medium, fontSize: 20 });
