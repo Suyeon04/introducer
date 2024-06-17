@@ -1,9 +1,11 @@
-import Text from "@/entities/ui/text";
 import Button from "@/entities/ui/button";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { nanoid } from "nanoid";
 import KakaoMap from "@/entities/ui/kakao-map";
+import { B1, Body1_R, H3_R } from "@/shared/ui/typograpy";
+import { TextProps } from "@/shared/types";
+import { colors } from "@/shared/ui/colors";
 
 interface Props {
   importantContents: { title: string; content: string }[];
@@ -35,12 +37,19 @@ const StyledLine = styled.hr`
   width: 100%;
 `;
 
-const StyledHiringSideTexts = styled.div`
+const StyledHiringSideTextWraaper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 60px;
+  gap: 40px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+`;
+
+const StyledHiringSideText = styled.div<TextProps>`
+  color: ${(props) => props.fontColor};
+  ${Body1_R};
 `;
 
 export default function HiringSide({ importantContents, location }: Props) {
@@ -51,20 +60,14 @@ export default function HiringSide({ importantContents, location }: Props) {
           const isLastItem = index === importantContents.length - 1;
           return (
             <StyledHiringSideContent key={nanoid()}>
-              <StyledHiringSideTexts>
-                <Text
-                  text={content.title}
-                  fontSize={15}
-                  padding={10}
-                  fontColor={"#bababa"}
-                />
-                <Text
-                  text={content.content}
-                  fontSize={15}
-                  padding={10}
-                  fontWeight={"bold"}
-                />
-              </StyledHiringSideTexts>
+              <StyledHiringSideTextWraaper>
+                <StyledHiringSideText fontColor={colors.grey}>
+                  {content.title}
+                </StyledHiringSideText>
+                <StyledHiringSideText fontColor={""}>
+                  {content.content}
+                </StyledHiringSideText>
+              </StyledHiringSideTextWraaper>
               {!isLastItem && <StyledLine />}
             </StyledHiringSideContent>
           );

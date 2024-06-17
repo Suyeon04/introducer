@@ -1,6 +1,8 @@
-import Text from "@/entities/ui/text";
+import { TextProps } from "@/shared/types";
+import { Body1_R, H3 } from "@/shared/ui/typograpy";
 import styled from "@emotion/styled";
 import { nanoid } from "nanoid";
+import { colors } from "@/shared/ui/colors";
 
 interface Props {
   title: string;
@@ -19,13 +21,31 @@ const StyledHiringConditionWrapper = styled.div`
   padding-top: 5px;
 `;
 
+const StyledTitleText = styled.div<TextProps>`
+  color: ${(props) => props.fontColor};
+  ${H3};
+`;
+
+const StyledHiringConditionText = styled.div<TextProps>`
+  color: ${(props) => props.fontColor};
+  ${Body1_R};
+`;
+
 export default function HiringConditionContainer({ title, contents }: Props) {
   return (
     <StyledHiringConditionContainer>
-      <Text text={title} fontSize={20} fontWeight={"bold"} />
+      <StyledTitleText fontColor={colors.black} padding={0}>
+        {title}
+      </StyledTitleText>
       <StyledHiringConditionWrapper>
         {contents.map((content) => (
-          <Text text={"· " + content} fontSize={15} key={nanoid()} />
+          <StyledHiringConditionText
+            fontColor={colors.black}
+            padding={0}
+            key={nanoid()}
+          >
+            {"· " + content}
+          </StyledHiringConditionText>
         ))}
       </StyledHiringConditionWrapper>
     </StyledHiringConditionContainer>

@@ -8,8 +8,8 @@ interface MapProps {
 }
 
 const StyledMap = styled.map<MapProps>`
-  width: ${(props) => props.width + "px" || "auto"};
-  height: ${(props) => props.height + "px" || "auto"};
+  width: ${(props) => props.width + "px"};
+  height: ${(props) => props.height + "px"};
 `;
 
 const KakaoMap: React.FC<MapProps> = ({ width, height }) => {
